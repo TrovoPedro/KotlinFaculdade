@@ -30,6 +30,29 @@ fun main() {
         3.0 -> println("Vai levar carcada")
         in 3.1 .. 6.0 -> println("Da pra ir melhor")
         else -> print("Deu bom")
+    }
 
+    val resultadoNota = when(nota){
+        1.0 -> "Deu ruim"
+        3.0 -> "Vai levar carcada"
+        in 3.1 .. 6.0 -> "Da pra ir melhor"
+        else -> "Deu bom"
+    }
+
+    println(resultadoNota)
+
+    var contador  = 0;
+
+    while(contador < 10){
+        println("Número: ${++contador}")// pré-incremento
+    }
+
+
+    for (n in 1..10){ //for no kotlin
+        println(n)
+    }
+
+    for (n in 10 downTo 1){ // for decrescente
+        println(n)
     }
 }
