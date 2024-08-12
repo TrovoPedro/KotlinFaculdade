@@ -2,8 +2,8 @@ import java.util.Scanner
 
 fun main() {
     for (i in 1..3){
-        val nome = perguntarNome("Informe seu nome: ");
-        val idade = perguntarIdade("Informe sua idade: ");
+        val nome = perguntarNome("Informe seu $i° nome: ");
+        val idade = perguntarIdade("Informe sua $i° idade: ");
         exibirMensagemFinal(nome, idade)
     }
 }
