@@ -55,7 +55,7 @@ fun main() {
                 }
             }
             5 -> {
-                println("Quantidade de tarefas na lista ${listaTarefas.size}");
+                println("Você possui ${listaTarefas.size} tarefas na lista ");
             }
             6 -> break
             else -> print("Opção inválida");
