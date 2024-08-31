@@ -2,7 +2,7 @@ class PedidoPizza (
     var sabor:String = "",
     var preco:Double = 0.0,
     var quantidadeAmigos:Int = 0
-    ){
+){
     var listaCupom = mutableListOf<String>();
 
     fun descrever():String{
@@ -12,24 +12,24 @@ class PedidoPizza (
     }
 
     fun validarCupom(cupom:String){
+        listaCupom.add(cupom);
+
         if(cupom == "#amopizza"){
             preco = preco * 0.9;
-            listaCupom.add(cupom);
         }
-        listaCupom.add(cupom);
     }
 
-    fun obterValorPorAmigo():Double{
-        var valorPAmigo = preco / quantidadeAmigos;
+    fun obterValorPorAmigo(): String {
+        var valorPAmigo = "%.2f".format(preco / quantidadeAmigos);
 
         return valorPAmigo;
     }
 
     fun obterCuponsUsados():String{
-        var cuponsUsados = ""
+        var cuponsUsados = "";
 
         for(i in listaCupom){
-            cuponsUsados += "\n - $i"
+            cuponsUsados += "\n - $i";
         }
 
         return cuponsUsados;
